@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="525.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SendEmailWindowController">
+   <children>
+      <TextArea fx:id="EmailBody" layoutX="16.0" layoutY="142.0" prefHeight="302.0" prefWidth="510.0" />
+      <Text layoutX="14.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Body">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Button fx:id="CancelButton" layoutX="471.0" layoutY="492.0" mnemonicParsing="false" onAction="#CancelButton" text="Cancel" />
+      <Button fx:id="SendButton" layoutX="389.0" layoutY="492.0" mnemonicParsing="false" onAction="#Send" text="Send Email" />
+      <DatePicker fx:id="datePicker" layoutX="183.0" layoutY="80.0" />
+      <Text layoutX="183.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Notification">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <CheckBox fx:id="WIndowsNotificationToggle" layoutX="17.0" layoutY="453.0" mnemonicParsing="false" text="Send Windows Notification" />
+      <Button layoutX="17.0" layoutY="492.0" mnemonicParsing="false" onAction="#OpenChooseResipentListWindow" text="Select Recipients" />
+      <TextField fx:id="EmailHeader" layoutX="17.0" layoutY="80.0" />
+      <Text layoutX="16.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Header">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <ComboBox fx:id="HourBox" layoutX="365.0" layoutY="80.0" prefHeight="26.0" prefWidth="58.0" />
+      <ComboBox fx:id="MinuteBox" layoutX="442.0" layoutY="80.0" prefHeight="26.0" prefWidth="58.0" />
+      <Text layoutX="365.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="444.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minute">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#243d66" height="59.0" layoutX="-227.0" layoutY="-15.0" stroke="#243d66" strokeType="INSIDE" width="772.0" />
+      <Text fill="WHITE" layoutX="9.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set up Email" wrappingWidth="219.73673248291016">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

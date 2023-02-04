@@ -11,7 +11,6 @@ public class main extends Application
 {
 	public static void main(String[] args)
 	{
-		//Splash_Screen splash = new Splash_Screen();
 		launch(args);
 	}
 	@Override
@@ -20,6 +19,8 @@ public class main extends Application
 		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Email Automation");
+		stage.setResizable(false);
 		stage.show();
 	}
 }

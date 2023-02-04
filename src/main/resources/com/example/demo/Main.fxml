@@ -2,21 +2,20 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="160.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SceneController">
+<AnchorPane prefHeight="525.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SceneController">
    <children>
-      <Text layoutX="132.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" textAlignment="CENTER" wrappingWidth="467.23126220703125" AnchorPane.topAnchor="53.41015625">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#243d66" height="347.0" layoutX="-4.0" layoutY="-85.0" stroke="#4c515c" strokeType="INSIDE" width="552.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#73b0cd" height="381.0" layoutX="123.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Text cache="true" layoutX="123.0" layoutY="102.58984375" stroke="#6e7a94" strokeType="OUTSIDE" strokeWidth="0.0" text="Email &amp; Notification Automation" textAlignment="CENTER" wrappingWidth="300.0" AnchorPane.topAnchor="70.0">
          <font>
-            <Font name="Arial" size="36.0" />
+            <Font name="Arial" size="35.0" />
          </font>
       </Text>
-      <Line endX="17.79998779296875" endY="351.0" layoutX="157.0" layoutY="49.0" startX="17.79998779296875" startY="-49.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.topAnchor="-0.5" />
-      <Button layoutX="14.0" layoutY="121.0" mnemonicParsing="false" onAction="#SwitchToResipentsList" prefHeight="30.0" prefWidth="147.0" text="Resipent List" AnchorPane.leftAnchor="14.0" />
-      <Button layoutX="14.0" layoutY="161.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="147.0" text="Sent Notifications" AnchorPane.leftAnchor="14.0" />
-      <Button layoutX="14.0" layoutY="200.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="147.0" text="Settings" AnchorPane.leftAnchor="14.0" />
-      <Button layoutX="14.0" layoutY="33.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="147.0" text="Send New Notifitacion" AnchorPane.leftAnchor="14.0" />
+      <Button layoutX="198.0" layoutY="346.0" mnemonicParsing="false" onAction="#SwitchToResipentsList" prefHeight="30.0" prefWidth="147.0" text="Recipient List" AnchorPane.leftAnchor="198.0" />
+      <Button layoutX="198.0" layoutY="288.0" mnemonicParsing="false" onAction="#SwitchToSendEmail" prefHeight="40.0" prefWidth="147.0" text="Set up new email" AnchorPane.leftAnchor="198.0" />
    </children>
 </AnchorPane>

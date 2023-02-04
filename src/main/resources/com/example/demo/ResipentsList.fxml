@@ -4,21 +4,24 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="407.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SceneController">
+<AnchorPane prefHeight="410.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ResipentsListController">
    <children>
-      <ListView editable="true" layoutX="14.0" layoutY="45.0" prefHeight="351.0" prefWidth="290.0" AnchorPane.leftAnchor="14.0" />
+      <ListView fx:id="ResipentsList" editable="true" layoutX="14.0" layoutY="45.0" prefHeight="351.0" prefWidth="290.0" AnchorPane.leftAnchor="14.0" />
       <Button layoutX="462.0" layoutY="366.0" mnemonicParsing="false" onAction="#SwitchToMain" prefHeight="26.0" prefWidth="115.0" text="Cancel" AnchorPane.rightAnchor="22.799999999999997" />
-      <Button layoutX="463.0" layoutY="56.0" mnemonicParsing="false" text="Add New Recipent" AnchorPane.rightAnchor="22.899999999999977" />
-      <Button layoutX="463.0" layoutY="96.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Remove Resipent" AnchorPane.rightAnchor="22.899999999999977" />
-      <Button layoutX="463.0" layoutY="135.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Clear All" AnchorPane.rightAnchor="22.899999999999977" />
-      <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resipents List" AnchorPane.topAnchor="1.576171875">
+      <Button layoutX="463.0" layoutY="56.0" mnemonicParsing="false" onAction="#AddNewResipent" text="Add New Recipent" AnchorPane.rightAnchor="22.899999999999977" />
+      <Button layoutX="463.0" layoutY="96.0" mnemonicParsing="false" onAction="#RemoveResipent" prefHeight="26.0" prefWidth="115.0" text="Remove Resipent" AnchorPane.rightAnchor="22.899999999999977" />
+      <Button layoutX="463.0" layoutY="135.0" mnemonicParsing="false" onAction="#ClearAll" prefHeight="26.0" prefWidth="115.0" text="Clear All" AnchorPane.rightAnchor="22.899999999999977" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#243d66" height="40.0" layoutX="-8.0" layoutY="-8.0" stroke="#243d66" strokeType="INSIDE" width="610.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recipients List" AnchorPane.topAnchor="1.576171875">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
       <Line endX="471.0" endY="7.62939453125E-6" layoutX="129.0" layoutY="32.0" startX="-129.0" startY="7.62939453125E-6" AnchorPane.leftAnchor="-0.5" AnchorPane.rightAnchor="0.6000000000000227" />
+      <Button layoutX="464.0" layoutY="178.0" mnemonicParsing="false" onAction="#RefreshButton" prefHeight="26.0" prefWidth="115.0" text="Refreshh" />
    </children>
 </AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ChooseResipentsController">
+   <children>
+      <ListView fx:id="SelectedList" layoutX="331.0" layoutY="87.0" prefHeight="265.0" prefWidth="255.0" />
+      <ListView fx:id="AllContactsList" layoutX="14.0" layoutY="87.0" prefHeight="265.0" prefWidth="255.0" />
+      <Text layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Contacts" />
+      <Text layoutX="331.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Recipients" />
+      <Button fx:id="AddButton" layoutX="278.0" layoutY="132.0" mnemonicParsing="false" onAction="#AddTOList" prefHeight="41.0" prefWidth="42.0" text="&gt;" />
+      <Button fx:id="RemoveButton" layoutX="278.0" layoutY="208.0" mnemonicParsing="false" onAction="#RemoveFromList" prefHeight="41.0" prefWidth="42.0" text="&lt;" />
+      <Button fx:id="CancelButton" layoutX="534.0" layoutY="361.0" mnemonicParsing="false" onAction="#CancelButton" text="Cancel" />
+      <Button fx:id="DoneButton" layoutX="470.0" layoutY="361.0" mnemonicParsing="false" onAction="#DoneChoosingButton" text="Done" />
+      <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#243d66" height="200.0" layoutX="-21.0" layoutY="-146.0" stroke="#243d66" strokeType="INSIDE" strokeWidth="5.0" width="627.0" />
+      <Text fill="WHITE" layoutX="15.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecet Email Recipients">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#AddNewResipent" text="Add New Recipent" />
+      <Button fx:id="DoneButton1" layoutX="142.0" layoutY="361.0" mnemonicParsing="false" onAction="#RefreshButton" text="Refresh" />
+   </children>
+</AnchorPane>

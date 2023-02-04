@@ -11,6 +11,9 @@ module com.example.demo {
 	requires com.almasb.fxgl.all;
 	requires java.datatransfer;
 	requires java.desktop;
+	requires java.mail;
+	requires activation;
+	requires com.sun.jna;
 
 	opens com.example.demo to javafx.fxml;
 	exports com.example.demo;
