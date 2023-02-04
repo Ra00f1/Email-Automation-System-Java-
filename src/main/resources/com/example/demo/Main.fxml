@@ -15,7 +15,8 @@
             <Font name="Arial" size="35.0" />
          </font>
       </Text>
-      <Button layoutX="198.0" layoutY="346.0" mnemonicParsing="false" onAction="#SwitchToResipentsList" prefHeight="30.0" prefWidth="147.0" text="Recipient List" AnchorPane.leftAnchor="198.0" />
-      <Button layoutX="198.0" layoutY="288.0" mnemonicParsing="false" onAction="#SwitchToSendEmail" prefHeight="40.0" prefWidth="147.0" text="Set up new email" AnchorPane.leftAnchor="198.0" />
+      <Button layoutX="198.0" layoutY="320.0" mnemonicParsing="false" onAction="#SwitchToResipentsList" prefHeight="30.0" prefWidth="147.0" text="Recipient List" AnchorPane.leftAnchor="198.0" />
+      <Button layoutX="198.0" layoutY="263.0" mnemonicParsing="false" onAction="#SwitchToSendEmail" prefHeight="40.0" prefWidth="147.0" text="Set up new email" AnchorPane.leftAnchor="198.0" />
+      <Button layoutX="198.0" layoutY="365.0" mnemonicParsing="false" onAction="#SwitchToSettings" prefHeight="30.0" prefWidth="147.0" text="Settings" />
    </children>
 </AnchorPane>

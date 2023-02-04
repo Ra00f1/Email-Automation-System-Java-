@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -24,6 +25,16 @@ public class SceneController
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.setTitle("Email Automation");
+		stage.setResizable(false);
+		stage.show();
+	}
+	public void SwitchToSettings(ActionEvent event) throws IOException, AWTException
+	{
+		Parent root = FXMLLoader.load(getClass().getResource("Settings.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.setTitle("Settings");
 		stage.setResizable(false);
 		stage.show();
 	}
