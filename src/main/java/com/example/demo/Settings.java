@@ -11,20 +11,41 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Settings
 {
+	String email;
+	String password;
 	@FXML
 	Button CancelButton;
 	@FXML
 	TextField EmailTextField;
 	@FXML
 	TextField PasswordTextField;
+
+	@FXML
+	public void initialize() throws IOException
+	{
+		try
+		{
+			File myObj = new File("Settings.txt");
+			Scanner myReader = new Scanner(myObj);
+			String data = myReader.nextLine();
+			email = data.split(":")[1];
+			data = myReader.nextLine();
+			password = data.split(":")[1];
+			EmailTextField.setText(email);
+			PasswordTextField.setText(password);
+		}
+		catch (FileNotFoundException e)
+		{
+			throw new RuntimeException(e);
+		}
+	}
 	public void CancelButton(ActionEvent event) throws IOException
 	{
 		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
@@ -37,8 +58,8 @@ public class Settings
 	}
 	public void DoneButton(ActionEvent event) throws IOException
 	{
-		String email = EmailTextField.getText();
-		String password = PasswordTextField.getText();
+		email = EmailTextField.getText();
+		password = PasswordTextField.getText();
 
 		ArrayList<String> list = new ArrayList<String>();
 		list.add("Email");
@@ -60,7 +81,7 @@ public class Settings
 	{
 		System.out.println(list);
 		try {
-			File myObj = new File("Data.txt");
+			File myObj = new File("Settings.txt");
 			if (myObj.createNewFile())
 			{
 				System.out.println("File created: " + myObj.getName());

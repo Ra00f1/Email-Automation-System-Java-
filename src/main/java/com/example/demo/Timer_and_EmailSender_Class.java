@@ -6,6 +6,8 @@ import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.Calendar;
 import java.util.Date;
@@ -33,6 +35,7 @@ public class Timer_and_EmailSender_Class
 
 	public void Start()
 	{
+		System.out.println((String) ReadEmailandPassword().get(0) + (String) ReadEmailandPassword().get(1));
 		System.out.println(EmailInfo);
 		System.out.println(Emails);
 		int year = (int) EmailInfo.get(0);
@@ -97,7 +100,7 @@ public class Timer_and_EmailSender_Class
 			                                             protected PasswordAuthentication getPasswordAuthentication()
 			                                             {
 				                                             return new PasswordAuthentication(
-						                                             "testemailsender772@gmail.com", "zdbhrhyzrbhgtjlv");
+						                                             (String) ReadEmailandPassword().get(0), (String) ReadEmailandPassword().get(1));
 			                                             }
 		                                             });
 
@@ -107,7 +110,7 @@ public class Timer_and_EmailSender_Class
 		for (String user: Users)
 		{
 			try {
-				InternetAddress addressFrom = new InternetAddress("testemailsender772@gmail.com");
+				InternetAddress addressFrom = new InternetAddress((String) ReadEmailandPassword().get(0));
 
 				MimeMessage message = new MimeMessage(session);
 				message.setSender(addressFrom);
@@ -126,6 +129,25 @@ public class Timer_and_EmailSender_Class
 		{
 			Window_Notification_System notification_system = new Window_Notification_System();
 		}
+	}
+
+	public ArrayList ReadEmailandPassword()
+	{
+		ArrayList<String> data = new ArrayList<String>();
+		try
+		{
+			File myObj = new File("Settings.txt");
+			Scanner myReader = new Scanner(myObj);
+			String readdata = myReader.nextLine();
+			data.add(readdata.split(":")[1]);
+			readdata = myReader.nextLine();
+			data.add(readdata.split(":")[1]);
+		}
+		catch (FileNotFoundException e)
+		{
+			throw new RuntimeException(e);
+		}
+		return data;
 	}
 
 	///////////////////////////////////////////////Gets and Sets///////////////////////////////////////////////////////////

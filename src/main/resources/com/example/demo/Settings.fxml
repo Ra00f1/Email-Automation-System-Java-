@@ -4,9 +4,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="525.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Settings">
+<AnchorPane prefHeight="525.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Settings">
    <children>
       <Text layoutX="14.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <Text layoutX="14.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
@@ -14,7 +15,12 @@
       <TextField fx:id="PasswordTextField" layoutX="14.0" layoutY="181.0" />
       <Button fx:id="CancelButton" layoutX="484.0" layoutY="485.0" mnemonicParsing="false" onAction="#CancelButton" text="Cancel" />
       <Button fx:id="DoneButton" layoutX="432.0" layoutY="485.0" mnemonicParsing="false" onAction="#DoneButton" text="Done" />
-      <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#243d66" height="203.0" layoutX="-5.0" layoutY="-148.0" stroke="#243d66" strokeType="INSIDE" strokeWidth="5.0" width="555.0" />
+      <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#243d66" height="203.0" layoutX="-2.0" layoutY="-157.0" stroke="#243d66" strokeType="INSIDE" strokeWidth="5.0" width="555.0" />
       <Text layoutX="14.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note: if the program doesn't work instead of the normal email password try creating a special program password from Google -&gt; Secutiry -&gt; App Password" wrappingWidth="506.39998779296866" />
+      <Text fill="WHITE" layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
