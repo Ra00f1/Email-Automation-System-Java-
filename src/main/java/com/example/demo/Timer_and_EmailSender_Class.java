@@ -69,11 +69,14 @@ public class Timer_and_EmailSender_Class
 				} catch (AWTException e)
 				{
 					throw new RuntimeException(e);
+				} catch (MessagingException e)
+				{
+					throw new RuntimeException(e);
 				}
 			}
 		}, startTime);
 	}
-	public void EmailSender(List<String> Users, String SubjectText, String EmailText) throws NoSuchProviderException, AWTException
+	public void EmailSender(List<String> Users, String SubjectText, String EmailText) throws MessagingException, AWTException
 	{
 		final String emailSMTPserver = "smtp.gmail.com";
 		final String emailSMTPPort = "465";
@@ -90,11 +93,18 @@ public class Timer_and_EmailSender_Class
 		properties.put("mail.smtp.socketFactory.port", emailSMTPPort);
 		properties.put("mail.smtp.socketFactory.class",
 		               "javax.net.ssl.SSLSocketFactory");
+		//properties.put("mail.smtp.starttls.required", "true");
+		//properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
+		properties.put("mail.smtp.ssl.protocols", "TLSv1.2 TLSv1.3");
+		properties.put("mail.smtp.ssl.ciphersuites", "TLS_AES_128_GCM_SHA256 TLS_RSA_WITH_AES_128_CBC_SHA");
 		properties.put("mail.smtp.auth", "true");
 		properties.put("mail.smtp.port", emailSMTPPort);
-
-		// Get the default Session object.
-		Session session = Session.getDefaultInstance(properties,
+		//Session session = Session.getInstance(properties);
+		//Store store = session.getStore("imap");
+		//store.connect(host, (String) ReadEmailandPassword().get(0), (String) ReadEmailandPassword().get(1));
+		System.out.println((String) ReadEmailandPassword().get(0)+ (String) ReadEmailandPassword().get(1));
+		//Get the default Session object.
+		Session session = Session.getInstance(properties,
 		                                             new Authenticator()
 		                                             {
 			                                             protected PasswordAuthentication getPasswordAuthentication()
@@ -147,6 +157,7 @@ public class Timer_and_EmailSender_Class
 		{
 			throw new RuntimeException(e);
 		}
+		System.out.println(data);
 		return data;
 	}
 
